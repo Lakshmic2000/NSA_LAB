@@ -1,0 +1,253 @@
+
+
+
+
+
+
+
+
+echo "enter the radius:"
+read r
+echo "enter the height:"
+read h
+echo "enter the length:"
+read l
+echo "enter the breadth:"
+read b
+echo "MENU FOR CALCULATING AREA"
+echo "1)Area of circle"
+echo "2)Area of rectangle"
+echo "3)Area of triangle"
+echo "Enter your choice:"
+read ch
+case $ch in
+    
+    1)a=$(expr 22 / 7 \* $r \* $r)
+      echo "Area of circle:$a"
+      ;;
+    2)a=$(expr $l \* $b)
+      echo "Area of rectangle:$a"
+       ;;
+    3)a=$(expr $b \* $h \* 1\2)
+      echo "Area of triangle:$a"
+       ;;
+esac    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exam@debian:~$ emacs area.sh
+exam@debian:~$ bash area.sh
+enter the radius:
+4
+enter the height:
+5
+enter the length:
+6
+enter the breadth:
+5
+MENU FOR CALCULATING AREA
+1)Area of circle
+2)Area of rectangle
+3)Area of triangle
+Enter your choice:
+1
+Area of circle:48
+exam@debian:~$ bash area.sh
+enter the radius:
+4
+enter the height:
+5
+enter the length:
+6
+enter the breadth:
+5
+MENU FOR CALCULATING AREA
+1)Area of circle
+2)Area of rectangle
+3)Area of triangle
+Enter your choice:
+2
+Area of rectangle:30
+exam@debian:~$ bash area.sh
+enter the radius:
+4
+enter the height:
+5
+enter the length:
+6
+enter the breadth:
+5
+MENU FOR CALCULATING AREA
+1)Area of circle
+2)Area of rectangle
+3)Area of triangle
+Enter your choice:
+3
+Area of triangle:300
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exam@debian:~$ mkdir FISAT
+exam@debian:~$ cd FISAT
+exam@debian:~/FISAT$ mkdir DAY1
+exam@debian:~/FISAT$ mkdir DAY2
+exam@debian:~/FISAT$ mkdir DAY3
+exam@debian:~/FISAT$ cd DAY1
+exam@debian:~/FISAT/DAY1$ vi f1.txt
+exam@debian:~/FISAT/DAY1$ vi f2.txt
+exam@debian:~/FISAT/DAY1$ vi f3.txt
+exam@debian:~/FISAT/DAY1$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ vi m1.txt
+exam@debian:~/FISAT/DAY2$ vi m2.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ vi c1.txt
+exam@debian:~/FISAT/DAY3$ vi c2.txt
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd ..
+exam@debian:~$ ps
+    PID TTY          TIME CMD
+   8479 pts/1    00:00:00 bash
+   8846 pts/1    00:00:00 ps
+exam@debian:~$ pwd
+/home/exam
+exam@debian:~$ cd FISAT
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ pwd
+/home/exam/FISAT/DAY3
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd ..
+exam@debian:~$ cd FISAT
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ ls
+m1.txt  m2.txt
+exam@debian:~/FISAT/DAY2$ ls -1 >> m3.txt
+exam@debian:~/FISAT/DAY2$ ls
+m1.txt  m2.txt  m3.txt
+exam@debian:~/FISAT/DAY2$ cat m3.txt
+m1.txt
+m2.txt
+m3.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY1
+exam@debian:~/FISAT/DAY1$ chmod -rx f1.txt
+exam@debian:~/FISAT/DAY1$ chmod a-rx f1.txt
+exam@debian:~/FISAT/DAY1$ chmod +w f1.txt
+exam@debian:~/FISAT/DAY1$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp -r DAY2/m3.txt DAY3/c3.txt
+cp: cannot stat 'DAY2/m3.txt': No such file or directory
+exam@debian:~/FISAT/DAY2$ cp -r DAY2/m3.txt DAY3/cat >c3.txt
+cp: cannot stat 'DAY2/m3.txt': No such file or directory
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp m3.txt >> DAY3/c3.txt
+bash: DAY3/c3.txt: No such file or directory
+exam@debian:~/FISAT/DAY2$ cp m3 /home/exam/FISAT/C3
+cp: cannot stat 'm3': No such file or directory
+exam@debian:~/FISAT/DAY2$ cp m3.txt /home/exam/FISAT/C3
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt
+exam@debian:~/FISAT/DAY3$ cat c3
+cat: c3: No such file or directory
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp m3.txt /home/exam/FISAT/cat >c3.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt
+exam@debian:~/FISAT/DAY3$ cat >c3.txt
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ ls
+c3.txt  m1.txt  m2.txt  m3.txt
+exam@debian:~/FISAT/DAY2$ cat c3.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ cp m3.txt /home/exam/FISAT/cat >c3.txt
+cp: cannot stat 'm3.txt': No such file or directory
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp m3.txt /home/exam/FISAT/DAY3/cat >c3.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt  c3.txt  cat
+exam@debian:~/FISAT/DAY3$ cp m3.txt /home/exam/FISAT/DAY3/cat >c3.txt
+cp: cannot stat 'm3.txt': No such file or directory
+exam@debian:~/FISAT/DAY3$ cp m3.txt /home/exam/FISAT/DAY3/cat >c3.txt
+cp: cannot stat 'm3.txt': No such file or directory
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp m3.txt /home/exam/FISAT/DAY3/cat >c3.tx
+exam@debian:~/FISAT/DAY2$ cp m3 /home/exam/FISAT/DAY3/cat>c3.txt
+cp: cannot stat 'm3': No such file or directory
+exam@debian:~/FISAT/DAY2$ cp m3.txt /home/exam/FISAT/DAY3/cat>c3.txt
+exam@debian:~/FISAT/DAY2$ cd..
+bash: cd..: command not found
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt  c3.txt  cat
+exam@debian:~/FISAT/DAY3$ cat c3.txt
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt  c3.txt  cat
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp -i m3.txt /home/exam/FISAT/DAY3/cat>c3.txt
+cp: overwrite '/home/exam/FISAT/DAY3/cat'? y
+exam@debian:~/FISAT/DAY2$ ls
+c3.tx  c3.txt  m1.txt  m2.txt  m3.txt
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt  c3.txt  cat
+exam@debian:~/FISAT/DAY3$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cp -i m3.txt /home/exam/FISAT/DAY3/c3.txt
+cp: overwrite '/home/exam/FISAT/DAY3/c3.txt'? y
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY2
+exam@debian:~/FISAT/DAY2$ cd ..
+exam@debian:~/FISAT$ cd DAY3
+exam@debian:~/FISAT/DAY3$ ls
+c1.txt  c2.txt  c3.txt  cat
+exam@debian:~/FISAT/DAY3$ 
+
+
